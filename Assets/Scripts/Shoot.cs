@@ -31,13 +31,13 @@ public class Shoot : MonoBehaviour
     void shooting()
     {
         // created bullet
-        GameObject bullet = Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, firePosition.position, Quaternion.identity);
 
         // Fire a bullet
-        bullet.GetComponent<Rigidbody>().AddRelativeForce(firePosition.forward * bulletForce);
+        bullet.GetComponent<Rigidbody>().AddRelativeForce(Vector3.back * bulletForce);
 
         // Destroy the bullet after 7 seconds
         Destroy(bullet, 7f);
 
     }
-}
+}// End shoot
