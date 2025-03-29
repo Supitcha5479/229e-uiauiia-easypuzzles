@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CharacterMovement2 : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public float speed = 3f;
     public float rotationSpeed = 500f;
@@ -66,4 +66,5 @@ public class CharacterMovement2 : MonoBehaviour
         velocity.y -= gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
     }
+
 }
